@@ -1,2 +1,2 @@
-# story
-Campaign Story provides details on the campaign
+# description
+Campaign Description provides details on the campaign
