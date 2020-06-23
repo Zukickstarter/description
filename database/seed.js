@@ -7,33 +7,31 @@ const generate100 = (() => {
   // store results
   let generated = []
 
-  let fakeNumber = faker.random.number();
-  let img1 = (faker.random.number({'min': 100,'max': 500}))
-  let img2 = (faker.random.number({'min': 100,'max': 500}))
-  let fakeParagraph = faker.lorem.paragraphs(3);
-  let fakeSentence = faker.lorem.sentence();
-
   for (let i = 0; i < 100; i++) {
+    let img1 = (faker.random.number({'min': 100,'max': 500}))
+    let img2 = (faker.random.number({'min': 100,'max': 500}))
+    // let fakeParagraph = faker.lorem.paragraphs(3);
+    // let fakeSentence = faker.lorem.sentence();
     let sampleDesc = {
       id: i,
       story: {
-        text: fakeParagraph,
+        text: faker.lorem.paragraphs(3),
         images: [{
           src: `http://www.fillmurray.com/${img1}/${img1}`,
-          caption: fakeSentence
+          caption: faker.lorem.sentence()
         },
           {
           src: `http://www.fillmurray.com/${img2}/${img2}`,
-          caption: fakeSentence
+          caption: faker.lorem.sentence()
         }]
       },
-      risks: fakeParagraph,
+      risks: faker.lorem.paragraphs(3),
     }
     generated.push(sampleDesc);
   }
   return generated;
 })
-let data = generate100()
+let data = generate100();
 console.log(data)
 
 const seedDb = () => {
