@@ -8,33 +8,36 @@ const faker = require('faker');
 // create 100 datapoints
 const generate100 = (() => {
   // store results
-  let generated = []
+  let generated = [];
 
   for (let i = 1; i <= 100; i++) {
     // get a new random data point for each
-    let img1 = (faker.random.number({'min': 100,'max': 500}))
-    let img2 = (faker.random.number({'min': 100,'max': 500}))
+    let img1 = (faker.random.number({'min': 100, 'max': 500}));
+    let img2 = (faker.random.number({'min': 100, 'max': 500}));
+    // vary the length of product description
+    let pLength = (faker.random.number({'min': 3, 'max': 10}));
     // let fakeParagraph = faker.lorem.paragraphs(3);
     // let fakeSentence = faker.lorem.sentence();
     let sampleDesc = {
+      // increment the id for each description object
       id: i,
       story: {
-        text: faker.lorem.paragraphs(3),
+        text: faker.lorem.paragraphs(pLength),
         images: [{
           src: `http://www.fillmurray.com/${img1}/${img1}`,
           caption: faker.lorem.sentence()
         },
-          {
+        {
           src: `http://www.fillmurray.com/${img2}/${img2}`,
           caption: faker.lorem.sentence()
         }]
       },
-      risks: faker.lorem.paragraphs(3),
-    }
+      risks: faker.lorem.paragraphs(2),
+    };
     generated.push(sampleDesc);
   }
   return generated;
-})
+});
 let data = generate100();
 
 const seedDb = () => {
@@ -42,7 +45,7 @@ const seedDb = () => {
   Desc.collection.drop()
     .then(() => Desc.create(data))
     .then(() => console.log('database seeded!'))
-    .catch(() => console.error('error seeding db'))
-}
+    .catch(() => console.error('error seeding db'));
+};
 
 seedDb();
