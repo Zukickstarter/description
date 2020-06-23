@@ -2,6 +2,9 @@ const db = require('./index.js');
 const Desc = require('./model.js');
 const faker = require('faker');
 
+// create fake product name
+// console.log(faker.commerce.productName())
+
 // create 100 datapoints
 const generate100 = (() => {
   // store results
@@ -33,7 +36,6 @@ const generate100 = (() => {
   return generated;
 })
 let data = generate100();
-console.log(data)
 
 const seedDb = () => {
   // Desc.create(sampleDesc) // <- can't drop an empty db

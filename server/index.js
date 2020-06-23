@@ -18,4 +18,10 @@ app.get('/api/description/', (req, res) => {
   })
 });
 
+app.get('/api/description/:id', (req, res) => {
+  Desc.find({ id: req.params.id}, (err, desc) => {
+    res.send(desc);
+  })
+});
+
 app.listen(port, () => console.log(`Description app listening at http://localhost:${port}`));
