@@ -1,0 +1,38 @@
+{
+  "name": "description",
+  "version": "1.0.0",
+  "description": "Campaign Description provides details on the campaign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "build": "webpack",
+    "seed": "node database/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zukickstarter/description.git"
+  },
+  "author": "Nicolas Yarosz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zukickstarter/description/issues"
+  },
+  "homepage": "https://github.com/Zukickstarter/description#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "underscore": "^1.10.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
