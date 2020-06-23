@@ -7,7 +7,8 @@ const generate100 = (() => {
   // store results
   let generated = []
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 1; i <= 100; i++) {
+    // get a new random data point for each
     let img1 = (faker.random.number({'min': 100,'max': 500}))
     let img2 = (faker.random.number({'min': 100,'max': 500}))
     // let fakeParagraph = faker.lorem.paragraphs(3);
