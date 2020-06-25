@@ -4,9 +4,9 @@ const morgan = require('morgan');
 const Desc = require('../database/model.js');
 
 const app = express();
-const port = 3003;
+const port = 3006;
 
-console.log('dirname', __dirname)
+console.log('dirname', __dirname);
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(morgan('tiny'));
 
