@@ -1,38 +1,32 @@
 import React from 'react';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       date: new Date().toLocaleTimeString(),
-      id: props.id
+      id: props.id,
+      data: []
     };
   }
-  // this.props.id = id
-
-  // hello this shaw /image desctiption text/image-number/ and that was an image 🐄
 
   componentDidMount() {
-    this.intervalID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date().toLocaleString()
-    });
+    axios.get(`/api/description/${this.state.id}`)
+      .then(res => {
+        this.setState({
+          data: res.data[0]
+        });
+      });
   }
 
   render() {
+    console.log(this.state.data.story);
     return (
       <div>
         <h1>Hello from React!🍕</h1>
-        <h2>It is {this.state.date}.</h2>
+        <h2>The id is: {this.state.id}.</h2>
+        <p>some text</p>
       </div>
     );
   }
