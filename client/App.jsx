@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 
+import Story from './components/Story.jsx';
+import Risks from './components/Risks.jsx';
+// import Nav from './components/Nav.jsx';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -47,24 +52,20 @@ class App extends React.Component {
       return (
         <div>
           <h1>Hello from ZuKickstarter!🍕</h1>
-          <h3>This is product number: {data.id}</h3>
+          <h3>This is product name: {data.id}</h3>
           <div className="story" >
             <h2>STORY</h2>
-            <div className="text" >
-              {story.textTop}
-            </div>
+            <Story story={story}/>
             <img src={story.imageMiddle} alt={story.imageMiddleCaption}>
             </img>
             <p className="caption" style={{fontStyle: 'italic'}}>{story.imageMiddleCaption}</p>
-            <div className="text">
-              {story.textBottom}
+            <div className="text" style={{ whiteSpace: 'pre-wrap' }}>
+              {story.textBottom.replace(/[\r]+/g, '\n')}
             </div>
           </div>
           <div>
             <h2>RISKS AND CHALLENGES</h2>
-            <div>
-              {data.risks}
-            </div>
+            <Risks risks={data.risks}/>
           </div>
         </div>
       );

@@ -1,6 +1,7 @@
 const db = require('./index.js');
 const Desc = require('./model.js');
 const faker = require('faker');
+faker.locale = 'en_US';
 
 // create fake product name
 // console.log(faker.commerce.productName())
