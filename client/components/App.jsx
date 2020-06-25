@@ -31,6 +31,7 @@ class App extends React.Component {
 
   render() {
     const { error, isLoaded, data } = this.state;
+    const story = data.story;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -38,23 +39,31 @@ class App extends React.Component {
     } else {
       console.log(data.id);
       console.log(data.risks);
-      console.log(data.story);
-      console.log(data.story.textTop);
-      console.log(data.story.imageMiddle);
-      console.log(data.story.imageMiddleCaption);
-      console.log(data.story.textBottom);
+      console.log(Object.values(story));
+      console.log(story.textTop);
+      console.log(story.imageMiddle);
+      console.log(story.imageMiddleCaption);
+      console.log(story.textBottom);
       return (
         <div>
-          <h1>Hello from React!🍕</h1>
-          <h2>The id is: {data.id}.</h2>
+          <h1>Hello from ZuKickstarter!🍕</h1>
+          <h3>This is product number: {data.id}</h3>
           <div className="story" >
+            <h2>STORY</h2>
             <div className="text" >
-              TopText
-              <img src='https://images-na.ssl-images-amazon.com/images/I/710WW1XPhaL._AC_SL1280_.jpg' alt="this is an img caption">
-              </img>
-              <div className="text">
-                BottomText
-              </div>
+              {story.textTop}
+            </div>
+            <img src={story.imageMiddle} alt={story.imageMiddleCaption}>
+            </img>
+            <p className="caption" style={{fontStyle: 'italic'}}>{story.imageMiddleCaption}</p>
+            <div className="text">
+              {story.textBottom}
+            </div>
+          </div>
+          <div>
+            <h2>RISKS AND CHALLENGES</h2>
+            <div>
+              {data.risks}
             </div>
           </div>
         </div>
