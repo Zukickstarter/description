@@ -9,6 +9,14 @@ const port = 3006;
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(morgan('tiny'));
 
+// returns all description data
+app.get('/api/description', (req, res) => {
+  Desc.find((err, desc) => {
+    res.send(desc);
+  });
+});
+
+// returns description at id
 app.get('/api/description/:id', (req, res) => {
   Desc.find({ id: req.params.id}, (err, desc) => {
     res.send(desc);
