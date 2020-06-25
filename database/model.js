@@ -4,11 +4,10 @@ const db = require('./index.js');
 const descriptionSchema = new mongoose.Schema({
   id: Number,
   story: {
-    text: String,
-    images: [{
-      src: String,
-      caption: String
-    }]
+    textTop: String,
+    imageMiddle: String,
+    imageMiddleCaption: String,
+    textBottom: String
   },
   risks: String,
 });
