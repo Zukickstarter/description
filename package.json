@@ -4,7 +4,7 @@
   "description": "Campaign Description provides details on the campaign",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server/index.js",
     "build": "webpack",
     "seed": "node database/seed.js"
@@ -23,9 +23,11 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "jest": "^26.1.0",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.19",
     "morgan": "^1.10.0",
