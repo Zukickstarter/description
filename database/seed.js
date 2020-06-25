@@ -15,22 +15,17 @@ const generate100 = (() => {
     let img1 = (faker.random.number({'min': 100, 'max': 500}));
     let img2 = (faker.random.number({'min': 100, 'max': 500}));
     // vary the length of product description
-    let pLength = (faker.random.number({'min': 3, 'max': 10}));
+    let pLength = (faker.random.number({'min': 3, 'max': 5}));
     // let fakeParagraph = faker.lorem.paragraphs(3);
     // let fakeSentence = faker.lorem.sentence();
     let sampleDesc = {
       // increment the id for each description object
       id: i,
       story: {
-        text: faker.lorem.paragraphs(pLength),
-        images: [{
-          src: `http://www.fillmurray.com/${img1}/${img1}`,
-          caption: faker.lorem.sentence()
-        },
-        {
-          src: `http://www.fillmurray.com/${img2}/${img2}`,
-          caption: faker.lorem.sentence()
-        }]
+        textTop: faker.lorem.paragraphs(pLength),
+        imageMiddle: `http://www.fillmurray.com/${img1}/${img1}`,
+        imageMiddleCaption: faker.lorem.sentence(),
+        textBottom: faker.lorem.paragraphs(pLength)
       },
       risks: faker.lorem.paragraphs(2),
     };
@@ -39,6 +34,10 @@ const generate100 = (() => {
   return generated;
 });
 let data = generate100();
+
+// story: {
+//   "text": [{"type": "text", "text": "hello"}, {"type": "image", "src": "https://image.nonexist"}]
+// }
 
 const seedDb = () => {
   // Desc.create(sampleDesc) // <- can't drop an empty db

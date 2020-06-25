@@ -4,4 +4,4 @@
 **/vendor
 **/*.min.js
 client/data/*
-public/
+**/public/bundle.js
