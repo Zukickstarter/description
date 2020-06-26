@@ -1,10 +1,23 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+import { createGlobalStyle as global } from 'styled-components';
+
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
 // import Nav from './components/Nav.jsx';
 
+const GlobalStyle = global`
+  body {
+    background: #fff;
+    color: #282828;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -36,38 +49,24 @@ class App extends React.Component {
 
   render() {
     const { error, isLoaded, data } = this.state;
-    const story = data.story;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      console.log(data.id);
-      console.log(data.risks);
-      console.log(Object.values(story));
-      console.log(story.textTop);
-      console.log(story.imageMiddle);
-      console.log(story.imageMiddleCaption);
-      console.log(story.textBottom);
       return (
-        <div>
+        <>
+
+          <GlobalStyle />
           <h1>Hello from ZuKickstarter!🍕</h1>
           <h3>This is product name: {data.id}</h3>
-          <div className="story" >
-            <h2>STORY</h2>
-            <Story story={story}/>
-            <img src={story.imageMiddle} alt={story.imageMiddleCaption}>
-            </img>
-            <p className="caption" style={{fontStyle: 'italic'}}>{story.imageMiddleCaption}</p>
-            <div className="text" style={{ whiteSpace: 'pre-wrap' }}>
-              {story.textBottom.replace(/[\r]+/g, '\n')}
-            </div>
+          <div>
+            <Story story={data.story}/>
           </div>
           <div>
-            <h2>RISKS AND CHALLENGES</h2>
             <Risks risks={data.risks}/>
           </div>
-        </div>
+        </>
       );
     }
   }

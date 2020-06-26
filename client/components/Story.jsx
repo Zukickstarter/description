@@ -1,9 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+import { StyledDesc, NavHeader, SectionHeader, Caption } from '../StyledDiv.js';
 
-class Story extends React.Component {
-  render() {
-    return <p>Hello, this is a story: {this.props.story.textTop.replace(/[\r]+/g, '\n')}</p>;
-  }
-}
+const Story = (props) => {
+  const {story} = props;
+  const { textTop, imageMiddle, imageMiddleCaption, textBottom } = story;
+  return (
+    <StyledDesc>
+      <NavHeader>Story</NavHeader>
+      <p>{textTop.replace(/[\r]+/g, '\n')}</p>
+      <img src={imageMiddle} alt={imageMiddleCaption}></img>
+      <Caption>{imageMiddleCaption}</Caption>
+      <p>
+        {textBottom.replace(/[\r]+/g, '\n')}
+      </p>
+    </StyledDesc>
+  );
+};
 
 export default Story;
