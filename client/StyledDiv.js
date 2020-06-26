@@ -5,6 +5,16 @@ export const StyledDesc = styled.div`
   align-items: center; // <-this keeps the image unstretched
   flex-flow: column;
   max-width: 680px;
+  background: #fff;
+  color: #282828;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+`;
+
+export const Img = styled.img`
+  display: flex;
+  align-items: center; // <-this keeps the image unstretched
+  flex-flow: column;
+  width: 100%;
 `;
 
 export const NavHeader = styled.h3`
@@ -44,5 +54,5 @@ export const Caption = styled.figcaption`
   color: #9B9E9E;
   padding-right: 1.2rem !important;
   padding-left: 1.2rem !important;
-  display: block;
+  display: flex;
 `;
