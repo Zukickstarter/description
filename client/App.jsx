@@ -15,6 +15,7 @@ const GlobalStyle = global`
     font-size: 1.6rem;
     line-height: 3rem;
     margin-bottom: 3rem;
+    list-style-type: none;
   }
 `;
 
@@ -59,12 +60,8 @@ class App extends React.Component {
           <h1>Hello from ZuKickstarter!🍕</h1>
           <h3>This is product name: {data.id}</h3>
           <Nav />
-          <div>
-            <Story story={data.story}/>
-          </div>
-          <div id="risks">
-            <Risks risks={data.risks}/>
-          </div>
+          <Story story={data.story}/>
+          <Risks risks={data.risks}/>
         </>
       );
     }

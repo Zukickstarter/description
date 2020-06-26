@@ -19,15 +19,19 @@ export const Img = styled.img`
 
 export const NavButton = styled.button`
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: underline;
   color: grey;
   background:none;
   border: none;
-  list-style-type: none;
+  outline:none;
 
   &:hover {
     color: green;
+  }
+  &:focus {
+    color: green;
+    font-weight: 700;
   }
 `;
 
