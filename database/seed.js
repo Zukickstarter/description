@@ -1,6 +1,7 @@
 const db = require('./index.js');
 const Desc = require('./model.js');
 const faker = require('faker');
+faker.locale = 'en_US';
 
 // create fake product name
 // console.log(faker.commerce.productName())
@@ -12,8 +13,8 @@ const generate100 = (() => {
 
   for (let i = 1; i <= 100; i++) {
     // get a new random data point for each
-    let img1 = (faker.random.number({'min': 100, 'max': 500}));
-    let img2 = (faker.random.number({'min': 100, 'max': 500}));
+    let img1 = (faker.random.number({'min': 680, 'max': 680}));
+    let img2 = (faker.random.number({'min': 250, 'max': 680}));
     // vary the length of product description
     let pLength = (faker.random.number({'min': 3, 'max': 5}));
     // let fakeParagraph = faker.lorem.paragraphs(3);
@@ -23,7 +24,7 @@ const generate100 = (() => {
       id: i,
       story: {
         textTop: faker.lorem.paragraphs(pLength),
-        imageMiddle: `http://www.fillmurray.com/${img1}/${img1}`,
+        imageMiddle: `http://www.fillmurray.com/${img1}/${img2}`,
         imageMiddleCaption: faker.lorem.sentence(),
         textBottom: faker.lorem.paragraphs(pLength)
       },
