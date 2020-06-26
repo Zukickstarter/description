@@ -2,12 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { createGlobalStyle as global } from 'styled-components';
-import Scrollchor from 'react-scrollchor';
-
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
-// import Nav from './components/Nav.jsx';
+import Nav from './components/Nav.jsx';
 
 const GlobalStyle = global`
   body {
@@ -60,10 +58,7 @@ class App extends React.Component {
           <GlobalStyle />
           <h1>Hello from ZuKickstarter!🍕</h1>
           <h3>This is product name: {data.id}</h3>
-          <div>
-            <div><Scrollchor to="#story">story</Scrollchor></div>
-            <div><Scrollchor to="#risks">risks</Scrollchor></div>
-          </div>
+          <Nav />
           <div id="story">
             <Story story={data.story}/>
           </div>
