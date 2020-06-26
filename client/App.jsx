@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { createGlobalStyle as global } from 'styled-components';
+import Scrollchor from 'react-scrollchor';
 
 
 import Story from './components/Story.jsx';
@@ -56,14 +57,17 @@ class App extends React.Component {
     } else {
       return (
         <>
-
           <GlobalStyle />
           <h1>Hello from ZuKickstarter!🍕</h1>
           <h3>This is product name: {data.id}</h3>
           <div>
+            <div><Scrollchor to="#story">story</Scrollchor></div>
+            <div><Scrollchor to="#risks">risks</Scrollchor></div>
+          </div>
+          <div id="story">
             <Story story={data.story}/>
           </div>
-          <div>
+          <div id="risks">
             <Risks risks={data.risks}/>
           </div>
         </>
