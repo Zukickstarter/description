@@ -4,23 +4,16 @@ import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-
- body {
-   padding: 0;
-   margin: 0;
-   font-family: Roboto, sans-serif;
- }
-  /* @font-face {
-    font-family: 'Muli';
+  @font-face {
+    font-family: 'Monsterrat';
     src:
-      url("https://fonts.googleapis.com/css2?family=Muli")
+      url("'https://fonts.googleapis.com/css?family=Montserrat|Roboto'")
     font-weight: 600;
     font-style: normal;
   }
   html, body {
-    font-family: 'Muli', sans-serif;
-  } */
+    font-family: 'Montserrat', sans-serif;
+  }
   /* body {
     background: #fff;
     color: red;
