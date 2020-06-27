@@ -1,23 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { createGlobalStyle as global } from 'styled-components';
+import { GlobalStyle } from './StyledDiv';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
 import Nav from './components/Nav.jsx';
 
-const GlobalStyle = global`
-  body {
-    background: #fff;
-    color: #282828;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    list-style-type: none;
-  }
-`;
 
 class App extends React.Component {
   constructor(props) {

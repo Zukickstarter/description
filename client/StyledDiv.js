@@ -1,4 +1,25 @@
-import styled from 'styled-components';
+import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background: #fff;
+    color: #282828;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    list-style: none;
+  }
+`;
+
+export const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const StyledDesc = styled.div`
   display: flex;
@@ -11,10 +32,16 @@ export const StyledDesc = styled.div`
 `;
 
 export const Img = styled.img`
-  display: flex;
   align-items: center; // <-this keeps the image unstretched
   flex-flow: column;
   width: 100%;
+  &:hover {
+    animation: ${rotate360} infinite 1.5s linear;
+  }
+`;
+
+export const Ul = styled.ul`
+list-style-type: none;
 `;
 
 export const NavButton = styled.button`
@@ -27,12 +54,18 @@ export const NavButton = styled.button`
   outline:none;
 
   &:hover {
-    color: green;
+    color: #009E74;
   }
   &:focus {
-    color: green;
+    color: #009E74;
     font-weight: 700;
   }
+`;
+
+export const ButtonWithBottom = styled(NavButton)`
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(220, 222, 221);
 `;
 
 export const NavHeader = styled.h3`
