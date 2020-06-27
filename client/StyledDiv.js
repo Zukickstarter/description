@@ -1,18 +1,47 @@
 import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
+// import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
+// import MaisonNeueBookWoff from './assets/fonts/maisonNeueBook.woff';
+// import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
-  body {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+ body {
+   padding: 0;
+   margin: 0;
+   font-family: Roboto, sans-serif;
+ }
+  /* @font-face {
+    font-family: 'Muli';
+    src:
+      url("https://fonts.googleapis.com/css2?family=Muli")
+    font-weight: 600;
+    font-style: normal;
+  }
+  html, body {
+    font-family: 'Muli', sans-serif;
+  } */
+  /* body {
     background: #fff;
-    color: #282828;
+    color: red;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 3rem;
     margin-bottom: 3rem;
     list-style: none;
-  }
+  } */
 `;
 
-export const rotate360 = keyframes`
+// export const FontFaces = css`
+//   @font-face {
+//     font-family: 'Maison Neue Book';
+//     src: local('Maison Neue Book'), url(${fontURL}) format('tff'),
+//     font-weight: 600;
+//     font-style: normal;
+//   },
+// `;
+
+export const Rotate360 = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -28,7 +57,7 @@ export const StyledDesc = styled.div`
   max-width: 680px;
   background: #fff;
   color: #282828;
-  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Maison Neue Book', sans-serif;
 `;
 
 export const Img = styled.img`
@@ -36,7 +65,7 @@ export const Img = styled.img`
   flex-flow: column;
   width: 100%;
   &:hover {
-    animation: ${rotate360} infinite 1.5s linear;
+    animation: ${Rotate360} infinite 1.5s linear;
   }
 `;
 
