@@ -1,12 +1,17 @@
 import React from 'react';
 import Scrollchor from 'react-scrollchor';
+import { NavButton as Button } from '../StyledDiv';
 
 
 const Nav = (props) => (
-  <div>
-    <div><Scrollchor to="#story">story</Scrollchor></div>
-    <div><Scrollchor to="#risks">risks</Scrollchor></div>
-  </div>
+  <ul>
+    <li>
+      <Scrollchor to="#story"><Button>STORY</Button></Scrollchor>
+    </li>
+    <li>
+      <Scrollchor to="#risks"><Button>RISKS AND CHALLENGES</Button></Scrollchor>
+    </li>
+  </ul>
 );
 
 export default Nav;

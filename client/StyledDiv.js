@@ -17,6 +17,20 @@ export const Img = styled.img`
   width: 100%;
 `;
 
+export const NavButton = styled.button`
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: underline;
+  color: grey;
+  background:none;
+  border: none;
+  list-style-type: none;
+
+  &:hover {
+    color: green;
+  }
+`;
+
 export const NavHeader = styled.h3`
   display: block;
   align-items: left

@@ -59,7 +59,7 @@ class App extends React.Component {
           <h1>Hello from ZuKickstarter!🍕</h1>
           <h3>This is product name: {data.id}</h3>
           <Nav />
-          <div id="story">
+          <div>
             <Story story={data.story}/>
           </div>
           <div id="risks">
