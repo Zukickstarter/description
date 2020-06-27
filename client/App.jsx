@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { GlobalStyle, css } from './StyledDiv';
+import { GlobalStyle, css } from './stylesFormat';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledDesc, NavHeader } from '../StyledDiv';
+import { StyledDesc, NavHeader } from '../stylesFormat';
 
 
 const Risks = ({risks}) => (
