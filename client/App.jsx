@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { GlobalStyle } from './StyledDiv';
+import { GlobalStyle, css } from './StyledDiv';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
@@ -46,8 +46,8 @@ class App extends React.Component {
       return (
         <>
           <GlobalStyle />
-          <h1>Hello from ZuKickstarter!🍕</h1>
-          <h3>This is product name: {data.id}</h3>
+          <h1>Hello froßm ZuKickstarter!</h1>
+          <p>This is product name: {data.id}</p>
           <Nav />
           <Story story={data.story}/>
           <Risks risks={data.risks}/>

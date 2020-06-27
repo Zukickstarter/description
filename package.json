@@ -23,11 +23,13 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@beyonk/google-fonts-webpack-plugin": "^1.2.3",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "file-loader": "^6.0.0",
     "jest": "^26.1.0",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.19",
@@ -37,7 +39,9 @@
     "react-scrollchor": "^6.0.0",
     "styled-components": "^5.1.1",
     "underscore": "^1.10.2",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "devDependencies": {}
 }
