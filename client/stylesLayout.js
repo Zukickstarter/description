@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import
+
 
 export const Grid = styled.div`
   max-width: 1365px;
@@ -9,6 +11,12 @@ export const Grid = styled.div`
 export const Row = styled.div`
   border: solid 1px yellow;
   display: flex;
+`;
+
+export const StickyRow = styled(Row)`
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 `;
 
 // this xs function returns a media query passed with some styles based on the screen sizes we want to accommodate
