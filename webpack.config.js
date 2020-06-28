@@ -10,14 +10,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
   },
-  plugins: [
-    new GoogleFontsPlugin({
-      fonts: [
-        { family: 'Lato' },
-        { family: 'Roboto', variants: [ '400', '700italic' ] }
-      ]
-      /* ...options */
-    })],
   module: {
     rules: [
       {
