@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@bedrock-layout/appboundary": "^1.0.12",
+    "@bedrock-layout/center": "^1.0.10",
     "@bedrock-layout/frame": "^1.0.0",
     "@bedrock-layout/padbox": "^1.1.1",
     "@bedrock-layout/stack": "^1.1.1",

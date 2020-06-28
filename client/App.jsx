@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { GlobalStyle, css, } from './stylesFormat';
-import {Grid, Row, Col} from './stylesLayout';
+import {Grid, Row, Col, StickyRow} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
 import Stack from '@bedrock-layout/stack';
 import Padbox from '@bedrock-layout/padbox';
@@ -49,27 +49,29 @@ class App extends React.Component {
     } else {
       return (
         <AppBoundary>
-        <GlobalStyle />
+          <GlobalStyle />
           <Grid>
+            <StickyRow>
+              <Stack as={Padbox}>
+                <Col size={1}>
+                  <h1>Kickstarter Campaign</h1>
+                  <p>This is product name: {data.id}</p>
+                </Col>
+              </Stack>
+            </StickyRow>
             <Row>
-              <Col size={1}>
-                Colum size 1:1
-                <h1>Hello froßm ZuKickstarter!</h1>
-                <p>This is product name: {data.id}</p>
-              </Col>
-            </Row>
-            <Row>
-              <Col size={1} collapse='laptop'>
-                Column size 1:5
+              <Col as={StickyRow} size={1} collapse='laptop'>
                 <Nav />
               </Col>
-                <Col size={5}>
-              <Stack as={Padbox}>
-                  Column size 5:5
+              <Col size={4}>
+                <Stack as={Padbox}>
                   <Story story={data.story}/>
                   <Risks risks={data.risks}/>
-              </Stack>
-                </Col>
+                </Stack>
+              </Col>
+              <Col size={2}>
+                <div></div>
+              </Col>
             </Row>
           </Grid>
         </AppBoundary>

@@ -1,44 +1,31 @@
 import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
 // import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
-// import MaisonNeueBookWoff from './assets/fonts/maisonNeueBook.woff';
+import MaisonNeueBookWoff from './assets/fonts/maisonNeueBook.woff';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Monsterrat';
-    src:
-      url("'https://fonts.googleapis.com/css?family=Montserrat|Roboto'")
-    font-weight: 600;
+@font-face {
+    font-family: 'Maison Neue Book';
+    font-weight: normal;
     font-style: normal;
-  }
-  html, body {
-    font-family: 'Montserrat', sans-serif;
-  }
-  /* body {
-    background: #fff;
-    color: red;
-    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
-    line-height: 3rem;
-    margin-bottom: 3rem;
-    list-style: none;
-  } */
-  box-sizing: border-box;
-`;
+    src:
+      url(${MaisonNeueBookWoff}) format('woff');
+    }
 
-// export const FontFaces = css`
-//   @font-face {
-//     font-family: 'Maison Neue Book';
-//     src: local('Maison Neue Book'), url(${fontURL}) format('tff'),
-//     font-weight: 600;
-//     font-style: normal;
-//   },
-// `;
+  body {
+    background: #fff;
+    color: #282828;
+    font-family: "Maison Neue Book", "Webdings";
+    font-size: 16px;
+    /* line-height: 1rem; */
+    /* margin-bottom: 3rem; */
+  }
+`;
 
 export const StyledDesc = styled.div`
   background: #fff;
   color: #282828;
-  font-family: 'Maison Neue Book', sans-serif;
+  font-family: "Maison Neue Book", "Webdings";
 `;
 
 export const Ul = styled.ul`
@@ -46,13 +33,16 @@ list-style-type: none;
 `;
 
 export const NavButton = styled.button`
+  display: block;
   cursor: pointer;
-  font-size: 17px;
+  font: inherit;
+  font-size: 13px;
   text-decoration: underline;
   color: grey;
   background:none;
   border: none;
-  outline:none;
+  /* outline: solid 1px red; */
+  vertical-align: baseline;
 
   &:hover {
     color: #009E74;
