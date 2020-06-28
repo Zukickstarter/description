@@ -32,18 +32,19 @@ module.exports = {
           plugins: ['babel-plugin-styled-components']
         },
       },
-      // {
-      //   test: /\.(woff|woff2|eot|ttf|otf)$/,
-      //   use: {
-      //     loader: 'url-loader', // tried url-loader and file-loader
-      //     options: {
-      //       limit: 50000,
-      //       mimetype: 'application/font-woff',
-      //       name: './assets/fonts/[name].[ext]',
-      //       publicPath: '../'
-      //     }
-      //   }
-      // }
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              limit: 10000,
+              mimetype: 'application/font-woff',
+            },
+          },
+        ],
+      },
     ]
   },
   watch: true
