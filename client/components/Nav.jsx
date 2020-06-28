@@ -1,6 +1,6 @@
 import React from 'react';
 import Scrollchor from 'react-scrollchor';
-import { NavButton as Button, ButtonWithBottom, Ul } from '../StyledDiv';
+import { NavButton as Button, ButtonWithBottom, Ul } from '../stylesFormat';
 
 
 const Nav = (props) => (

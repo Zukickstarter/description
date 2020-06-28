@@ -4,23 +4,16 @@ import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-
- body {
-   padding: 0;
-   margin: 0;
-   font-family: Roboto, sans-serif;
- }
-  /* @font-face {
-    font-family: 'Muli';
+  @font-face {
+    font-family: 'Monsterrat';
     src:
-      url("https://fonts.googleapis.com/css2?family=Muli")
+      url("'https://fonts.googleapis.com/css?family=Montserrat|Roboto'")
     font-weight: 600;
     font-style: normal;
   }
   html, body {
-    font-family: 'Muli', sans-serif;
-  } */
+    font-family: 'Montserrat', sans-serif;
+  }
   /* body {
     background: #fff;
     color: red;
@@ -30,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 3rem;
     list-style: none;
   } */
+  box-sizing: border-box;
 `;
 
 // export const FontFaces = css`
@@ -41,32 +35,10 @@ export const GlobalStyle = createGlobalStyle`
 //   },
 // `;
 
-export const Rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 export const StyledDesc = styled.div`
-  display: flex;
-  align-items: center; // <-this keeps the image unstretched
-  flex-flow: column;
-  max-width: 680px;
   background: #fff;
   color: #282828;
   font-family: 'Maison Neue Book', sans-serif;
-`;
-
-export const Img = styled.img`
-  align-items: center; // <-this keeps the image unstretched
-  flex-flow: column;
-  width: 100%;
-  &:hover {
-    animation: ${Rotate360} infinite 1.5s linear;
-  }
 `;
 
 export const Ul = styled.ul`
@@ -99,7 +71,6 @@ export const ButtonWithBottom = styled(NavButton)`
 
 export const NavHeader = styled.h3`
   display: block;
-  align-items: left
   font-size: 2.1rem;
   font-weight: 400;
   line-height: 30px;
@@ -111,28 +82,14 @@ export const NavHeader = styled.h3`
 
 export const SectionHeader = styled.h1`
   color: #282828;
-  margin-bottom: 3rem;
-  font-size: 2.8rem;
   line-height: 40px;
   font-weight: bold;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  display: block;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 `;
 
 export const Caption = styled.figcaption`
   font-size: 14px;
   font-style: italic;
-  text-align: center;
   color: #9B9E9E;
   padding-right: 1.2rem !important;
   padding-left: 1.2rem !important;
-  display: flex;
 `;
