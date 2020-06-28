@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import { GlobalStyle, css, } from './stylesFormat';
 import {Grid, Row, Col, StickyRow} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
-import Stack from '@bedrock-layout/stack';
+import {Stack} from 'every-layout';
 import Padbox from '@bedrock-layout/padbox';
+import InlineCluster from '@bedrock-layout/inline-cluster';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
@@ -52,22 +53,23 @@ class App extends React.Component {
           <GlobalStyle />
           <Grid>
             <StickyRow>
-              <Stack as={Padbox}>
-                <Col size={1}>
-                  <h1>Kickstarter Campaign</h1>
-                  <p>This is product name: {data.id}</p>
+              <Stack as={Padbox} >
+                <Col size={1} as={InlineCluster}>
+                  <div>Campaign {data.id}</div>
+                  <div>FAQ</div>
+                  <div>Updates</div>
+                  <div>Comments</div>
+                  <div>Community</div>
                 </Col>
               </Stack>
             </StickyRow>
             <Row>
-              <Col as={StickyRow} size={1} collapse='laptop'>
+              <Col size={1} collapse='laptop'>
                 <Nav />
               </Col>
-              <Col size={4}>
-                <Stack as={Padbox}>
-                  <Story story={data.story}/>
-                  <Risks risks={data.risks}/>
-                </Stack>
+              <Col size={4} as={Padbox}>
+                <Story story={data.story}/>
+                <Risks risks={data.risks}/>
               </Col>
               <Col size={2}>
                 <div></div>
