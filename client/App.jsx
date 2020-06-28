@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { GlobalStyle, css } from './stylesFormat';
+import { GlobalStyle, css, } from './stylesFormat';
+import {Grid, Row, Col} from './stylesLayout';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
@@ -46,11 +47,26 @@ class App extends React.Component {
       return (
         <>
           <GlobalStyle />
-          <h1>Hello froßm ZuKickstarter!</h1>
-          <p>This is product name: {data.id}</p>
-          <Nav />
-          <Story story={data.story}/>
-          <Risks risks={data.risks}/>
+          <Grid>
+            <Row>
+              <Col size={1}>
+                Colum size 1:1
+                <h1>Hello froßm ZuKickstarter!</h1>
+                <p>This is product name: {data.id}</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col size={1} collapse='laptop'>
+                Column size 1:5
+                <Nav />
+              </Col>
+              <Col size={5}>
+                Column size 5:5
+                <Story story={data.story}/>
+                <Risks risks={data.risks}/>
+              </Col>
+            </Row>
+          </Grid>
         </>
       );
     }

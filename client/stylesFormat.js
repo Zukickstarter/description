@@ -44,10 +44,6 @@ export const Rotate360 = keyframes`
 `;
 
 export const StyledDesc = styled.div`
-  display: flex;
-  align-items: center; // <-this keeps the image unstretched
-  flex-flow: column;
-  max-width: 680px;
   background: #fff;
   color: #282828;
   font-family: 'Maison Neue Book', sans-serif;
