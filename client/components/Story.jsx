@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Frame from '@bedrock-layout/frame'
 import { StyledDesc, NavHeader, SectionHeader, Caption, Img, FontFaces } from '../stylesFormat';
 
 const Story = ({story}) => {
@@ -8,13 +9,15 @@ const Story = ({story}) => {
     <StyledDesc>
       <NavHeader id="story">Story</NavHeader>
       <div>
-        <p>{textTop}</p>
-        <Img src={imageMiddle} alt={imageMiddleCaption}></Img>
-        <Caption>{imageMiddleCaption}</Caption>
+        {textTop}
       </div>
-      <p>
+      <Frame ratio={[1,1]}>
+        <img src={imageMiddle} alt={imageMiddleCaption}/>
+      </Frame>
+      <Caption>{imageMiddleCaption}</Caption>
+      <div>
         {textBottom}
-      </p>
+      </div>
     </StyledDesc>
   );
 };

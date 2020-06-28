@@ -3,6 +3,9 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { GlobalStyle, css, } from './stylesFormat';
 import {Grid, Row, Col} from './stylesLayout';
+import AppBoundary from '@bedrock-layout/appboundary';
+import Stack from '@bedrock-layout/stack';
+import Padbox from '@bedrock-layout/padbox';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
@@ -45,8 +48,8 @@ class App extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <>
-          <GlobalStyle />
+        <AppBoundary>
+        <GlobalStyle />
           <Grid>
             <Row>
               <Col size={1}>
@@ -60,14 +63,17 @@ class App extends React.Component {
                 Column size 1:5
                 <Nav />
               </Col>
-              <Col size={5}>
-                Column size 5:5
-                <Story story={data.story}/>
-                <Risks risks={data.risks}/>
-              </Col>
+                <Col size={5}>
+              <Stack as={Padbox}>
+                  Column size 5:5
+                  <Story story={data.story}/>
+                  <Risks risks={data.risks}/>
+              </Stack>
+                </Col>
             </Row>
           </Grid>
-        </>
+        </AppBoundary>
+
       );
     }
   }

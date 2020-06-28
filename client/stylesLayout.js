@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Grid = styled.div`
   max-width: 1365px;
   border: solid 1px red;
+  margin: auto;
 `;
 
 export const Row = styled.div`
@@ -11,7 +12,6 @@ export const Row = styled.div`
 `;
 
 // this xs function returns a media query passed with some styles based on the screen sizes we want to accommodate
-// TODO: set max-width of grid to 1365px
 const media = {
   laptop: (styled) => `
     @media only screen and (max-width: 1024px) {
