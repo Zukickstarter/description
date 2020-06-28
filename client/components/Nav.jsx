@@ -3,7 +3,7 @@ import Scrollchor from 'react-scrollchor';
 import { NavButton as Button, ButtonWithBottom, Ul } from '../stylesFormat';
 import {Grid, Row, Col} from '../stylesLayout';
 
-import Stack from '@bedrock-layout/stack';
+import {Stack} from 'every-layout';
 import Padbox from '@bedrock-layout/padbox';
 import Center from '@bedrock-layout/center';
 

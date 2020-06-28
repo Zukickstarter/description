@@ -13,7 +13,7 @@ const generate100 = (() => {
 
   for (let i = 1; i <= 100; i++) {
     // get a new random data point for each
-    let img1 = (faker.random.number({'min': 680, 'max': 680}));
+    let img1 = (faker.random.number({'min': 250, 'max': 680}));
     let img2 = (faker.random.number({'min': 250, 'max': 680}));
     // vary the length of product description
     let pLength = (faker.random.number({'min': 3, 'max': 5}));
