@@ -22,7 +22,7 @@ const Story = ({story}) => {
             <img src={imageMiddle} alt={imageMiddleCaption}/>
           </Frame>
         </div>
-          <Caption as={Center} >{imageMiddleCaption}</Caption>
+        <Caption as={Center} >{imageMiddleCaption}</Caption>
         <div>
           {textBottom}
         </div>

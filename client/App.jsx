@@ -53,15 +53,15 @@ class App extends React.Component {
           <GlobalStyle />
           <Grid>
             <Padbox style={{ border: '1px solid black' }} padding="lg">
-            <StickyRow>
-                  <Col size={1} as={InlineCluster}>
-                    <HeaderButton>Campaign {data.id}</HeaderButton>
-                    <HeaderButton>FAQ</HeaderButton>
-                    <HeaderButton>Updates</HeaderButton>
-                    <HeaderButton>Comments</HeaderButton>
-                    <HeaderButton>Community</HeaderButton>
-                  </Col>
-            </StickyRow>
+              <StickyRow>
+                <Col size={1} as={InlineCluster}>
+                  <HeaderButton>Campaign {data.id}</HeaderButton>
+                  <HeaderButton>FAQ</HeaderButton>
+                  <HeaderButton>Updates</HeaderButton>
+                  <HeaderButton>Comments</HeaderButton>
+                  <HeaderButton>Community</HeaderButton>
+                </Col>
+              </StickyRow>
             </Padbox>
             <Row>
               <Col size={1} collapse='laptop'>
