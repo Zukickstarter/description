@@ -55,12 +55,30 @@ export const NavButton = styled.button`
   }
 `;
 
-export const HeaderButton = styled(NavButton)`
+export const HeaderButton = styled.button`
+  display: block;
+  cursor: pointer;
+  font: inherit;
   font-size: 14px;
-  text-decoration-line: none
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
   text-decoration-style: solid
-  font-weight: 600;
+  color: rgb(40, 40, 40);
+  background:none;
+  border: none;
+  /* outline: solid 1px red; */
+  vertical-align: baseline;
+
+  &:hover {
+    color: #009E74;
+  }
+  &:focus {
+    color: #009E74;
+    font-weight: 700;
+  }
 `;
+
 
 export const ButtonWithBottom = styled(NavButton)`
   border-bottom-width: 0.1rem;
