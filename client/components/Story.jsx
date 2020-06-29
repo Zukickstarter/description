@@ -18,11 +18,11 @@ const Story = ({story}) => {
           {textTop}
         </div>
         <div>
-          <Frame ratio={[1, 1]}>
+          <Frame ratio={[1, 1]} >
             <img src={imageMiddle} alt={imageMiddleCaption}/>
           </Frame>
         </div>
-        <Caption>{imageMiddleCaption}</Caption>
+          <Caption as={Center} >{imageMiddleCaption}</Caption>
         <div>
           {textBottom}
         </div>

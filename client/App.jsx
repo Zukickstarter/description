@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { GlobalStyle, css, } from './stylesFormat';
+import { GlobalStyle, css, HeaderButton } from './stylesFormat';
 import {Grid, Row, Col, StickyRow} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
 import {Stack} from 'every-layout';
@@ -52,17 +52,17 @@ class App extends React.Component {
         <AppBoundary>
           <GlobalStyle />
           <Grid>
+            <Padbox style={{ border: '1px solid black' }} padding="lg">
             <StickyRow>
-              <Stack as={Padbox} >
-                <Col size={1} as={InlineCluster}>
-                  <div>Campaign {data.id}</div>
-                  <div>FAQ</div>
-                  <div>Updates</div>
-                  <div>Comments</div>
-                  <div>Community</div>
-                </Col>
-              </Stack>
+                  <Col size={1} as={InlineCluster}>
+                    <HeaderButton>Campaign {data.id}</HeaderButton>
+                    <HeaderButton>FAQ</HeaderButton>
+                    <HeaderButton>Updates</HeaderButton>
+                    <HeaderButton>Comments</HeaderButton>
+                    <HeaderButton>Community</HeaderButton>
+                  </Col>
             </StickyRow>
+            </Padbox>
             <Row>
               <Col size={1} collapse='laptop'>
                 <Nav />

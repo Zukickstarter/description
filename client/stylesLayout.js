@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 export const Grid = styled.div`
   max-width: 1365px;
-  border: solid 1px red;
+  /* border: solid 1px red; */
   margin: auto;
 `;
 
 export const Row = styled.div`
-  border: solid 1px yellow;
+  /* border: solid 1px yellow; */
   display: flex;
 `;
 
@@ -51,7 +51,7 @@ const media = {
 // props.size adjusts column size
 // if props.collapse has a value that matches our defined media query size, our column will collapse
 export const Col = styled.div`
-  border: solid 1px green;
+  /* border: solid 1px green; */
   flex: ${(props) => props.size};
   ${(props) => props.collapse && media[props.collapse](`
     display: none;

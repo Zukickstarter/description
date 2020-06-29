@@ -16,19 +16,20 @@ const generate100 = (() => {
     let img1 = (faker.random.number({'min': 250, 'max': 680}));
     let img2 = (faker.random.number({'min': 250, 'max': 680}));
     // vary the length of product description
-    let pLength = (faker.random.number({'min': 3, 'max': 5}));
+    let mLength = (faker.random.number({'min': 5, 'max': 7}));
+    let sLength = (faker.random.number({'min': 2, 'max': 3}));
     // let fakeParagraph = faker.lorem.paragraphs(3);
     // let fakeSentence = faker.lorem.sentence();
     let sampleDesc = {
       // increment the id for each description object
       id: i,
       story: {
-        textTop: faker.lorem.paragraphs(pLength),
+        textTop: faker.lorem.paragraphs(mLength).replace(/[\n\r]/g, '\n'),
         imageMiddle: `http://www.fillmurray.com/${img1}/${img2}`,
         imageMiddleCaption: faker.lorem.sentence(),
-        textBottom: faker.lorem.paragraphs(pLength)
+        textBottom: faker.lorem.paragraphs(mLength).replace(/[\n\r]/g, '\n')
       },
-      risks: faker.lorem.paragraphs(2),
+      risks: faker.lorem.paragraphs(sLength).replace(/[\n\r]/g, '\n'),
     };
     generated.push(sampleDesc);
   }
