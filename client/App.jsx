@@ -7,6 +7,7 @@ import AppBoundary from '@bedrock-layout/appboundary';
 import {Stack} from 'every-layout';
 import Padbox from '@bedrock-layout/padbox';
 import InlineCluster from '@bedrock-layout/inline-cluster';
+import Frame from '@bedrock-layout/frame';
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
@@ -52,9 +53,9 @@ class App extends React.Component {
         <AppBoundary>
           <GlobalStyle />
           <Grid>
-            <Padbox style={{ border: '1px solid black' }} padding="xl">
-              <StickyRow>
-                <Col size={1} >
+            <Padbox style={{ borderBottom: '1px solid #DCDEDD', borderTop: '1px solid #DCDEDD' }} padding="xl">
+              <Row>
+                <Col size={5} >
                   <InlineCluster gutter="xl" justify="start" align="start">
                     <HeaderButton>Campaign {data.id}</HeaderButton>
                     <HeaderButton>FAQ</HeaderButton>
@@ -63,7 +64,18 @@ class App extends React.Component {
                     <HeaderButton>Community</HeaderButton>
                   </InlineCluster>
                 </Col>
-              </StickyRow>
+                {/* <Col size={3} >
+                  <InlineCluster gutter="xl" justify="end" align="end">
+                    <Padbox style={{ backgroundColor: '#009E74',
+                      color: '#FFFFFF'}} padding="lg">Back this project
+                    </Padbox>
+                    <Frame ratio={[1, 1]}>
+                      <img src={'http://endlessicons.com/wp-content/uploads/2014/03/bookmark-icon-1.png'} alt="bookmark"/>
+                    </Frame>
+                    <HeaderButton>Save</HeaderButton>
+                  </InlineCluster>
+                </Col> */}
+              </Row>
             </Padbox>
             <Row>
               <Col size={1} collapse='laptop'>
