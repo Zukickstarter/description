@@ -52,7 +52,6 @@ class App extends React.Component {
         <AppBoundary>
           <GlobalStyle />
           <Grid>
-            <NavBar />
             <Row>
               <Col size={1} collapse='laptop'>
                 <SideBar />
@@ -60,9 +59,6 @@ class App extends React.Component {
               <Col size={4} as={Padbox}>
                 <Story story={data.story} />
                 <Risks risks={data.risks} />
-              </Col>
-              <Col size={2}>
-                <div></div>
               </Col>
             </Row>
           </Grid>
