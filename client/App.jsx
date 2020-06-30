@@ -1,17 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { GlobalStyle, css, HeaderButton } from './stylesFormat';
+import { GlobalStyle, css, NavBarButton } from './stylesFormat';
 import {Grid, Row, Col, StickyRow} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
-import {Stack} from 'every-layout';
 import Padbox from '@bedrock-layout/padbox';
-import InlineCluster from '@bedrock-layout/inline-cluster';
-import Frame from '@bedrock-layout/frame';
+
 
 import Story from './components/Story.jsx';
 import Risks from './components/Risks.jsx';
-import Nav from './components/Nav.jsx';
+import SideBar from './components/SideBar.jsx';
+import NavBar from './components/NavBar.jsx';
 
 
 class App extends React.Component {
@@ -53,33 +52,10 @@ class App extends React.Component {
         <AppBoundary>
           <GlobalStyle />
           <Grid>
-            <Padbox style={{ borderBottom: '1px solid #DCDEDD', borderTop: '1px solid #DCDEDD' }} padding="xl">
-              <Row>
-                <Col size={5} >
-                  <InlineCluster gutter="xl" justify="start" align="start">
-                    <HeaderButton>Campaign {data.id}</HeaderButton>
-                    <HeaderButton>FAQ</HeaderButton>
-                    <HeaderButton>Updates</HeaderButton>
-                    <HeaderButton>Comments</HeaderButton>
-                    <HeaderButton>Community</HeaderButton>
-                  </InlineCluster>
-                </Col>
-                {/* <Col size={3} >
-                  <InlineCluster gutter="xl" justify="end" align="end">
-                    <Padbox style={{ backgroundColor: '#009E74',
-                      color: '#FFFFFF'}} padding="lg">Back this project
-                    </Padbox>
-                    <Frame ratio={[1, 1]}>
-                      <img src={'http://endlessicons.com/wp-content/uploads/2014/03/bookmark-icon-1.png'} alt="bookmark"/>
-                    </Frame>
-                    <HeaderButton>Save</HeaderButton>
-                  </InlineCluster>
-                </Col> */}
-              </Row>
-            </Padbox>
+            <NavBar />
             <Row>
               <Col size={1} collapse='laptop'>
-                <Nav />
+                <SideBar />
               </Col>
               <Col size={4} as={Padbox}>
                 <Story story={data.story}/>

@@ -1,14 +1,14 @@
 import React from 'react';
 import Scrollchor from 'react-scrollchor';
-import { NavButton as Button, ButtonWithBottom, Ul } from '../stylesFormat';
+import { SideBarButton as Button, ButtonWithBottom, Ul } from '../stylesFormat';
 import {Grid, Row, Col} from '../stylesLayout';
 
-import {Stack} from 'every-layout';
+import Stack from '@bedrock-layout/stack';
 import Padbox from '@bedrock-layout/padbox';
 import Center from '@bedrock-layout/center';
 
 
-const Nav = (props) => (
+const SideBar = (props) => (
   <Stack as={Center} as={Padbox}>
     <Scrollchor to="#story">
       <ButtonWithBottom as={Padbox}>
@@ -21,4 +21,4 @@ const Nav = (props) => (
   </Stack>
 );
 
-export default Nav;
+export default SideBar;

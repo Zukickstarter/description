@@ -1,6 +1,4 @@
 const path = require('path');
-const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
-
 
 module.exports = {
   mode: 'production',
@@ -24,6 +22,7 @@ module.exports = {
           plugins: ['babel-plugin-styled-components']
         },
       },
+      // this is required for loading custom fonts set in /description/client/stylesFormat.js
       {
         test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
         use: [
