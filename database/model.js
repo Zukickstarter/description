@@ -5,7 +5,7 @@ const descriptionSchema = new mongoose.Schema({
   id: Number,
   story: {
     textTop: String,
-    imageMiddle: String,
+    imageMiddle: {url: String, w: Number, h: Number},
     imageMiddleCaption: String,
     textBottom: String
   },

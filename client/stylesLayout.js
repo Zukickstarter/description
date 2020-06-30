@@ -12,7 +12,8 @@ export const Row = styled.div`
   display: flex;
 `;
 
-export const StickyRow = styled(Row)`
+export const NavBarRow = styled.div`
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

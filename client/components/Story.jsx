@@ -18,8 +18,8 @@ const Story = ({story}) => {
           {textTop}
         </div>
         <div>
-          <Frame ratio={[1, 1]} >
-            <img src={imageMiddle} alt={imageMiddleCaption}/>
+          <Frame ratio={[imageMiddle.w, imageMiddle.h]} >
+            <img src={imageMiddle.url} alt={imageMiddleCaption}/>
           </Frame>
         </div>
         <Caption as={Center} >{imageMiddleCaption}</Caption>
