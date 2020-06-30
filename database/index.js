@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 
 // unsure on this url at the moment...
 const mongoDB = 'mongodb://localhost/description';
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+});
 
 const db = mongoose.connection;
 

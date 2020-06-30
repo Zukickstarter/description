@@ -46,7 +46,7 @@ const seedDb = () => {
   Desc.collection.drop()
     .then(() => Desc.create(data))
     .then(() => console.log('database seeded!'))
-    .catch(() => console.error('error seeding db'));
+    .catch((err) => console.error('error seeding db: ' + err));
 };
 
 seedDb();

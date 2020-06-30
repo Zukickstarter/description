@@ -9,4 +9,4 @@ if (id === null) {
 }
 
 // pass parsed URL id into app
-ReactDOM.render(<App id={id}/>, document.getElementById('main'));
+ReactDOM.render(<App id={id}/>, document.getElementById('description-main'));

@@ -3,18 +3,15 @@ import styled from 'styled-components';
 
 export const Grid = styled.div`
   max-width: 1365px;
-  /* border: solid 1px red; */
   margin: auto;
 `;
 
 export const Row = styled.div`
-  /* border: solid 1px yellow; */
   display: flex;
 `;
 
 export const NavBarRow = styled.div`
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 `;

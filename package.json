@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon server/index.js",
-    "build": "webpack -d --mode development",
+    "start": "node server/index.js",
+    "build": "webpack",
     "seed": "node database/seed.js"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "lodash": "^4.17.15",
     "mongoose": "^5.9.19",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scrollchor": "^6.0.0",

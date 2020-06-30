@@ -8,10 +8,6 @@ import Padbox from '@bedrock-layout/padbox';
 import InlineCluster from '@bedrock-layout/inline-cluster';
 import Frame from '@bedrock-layout/frame';
 
-import Story from '../components/Story.jsx';
-import Risks from '../components/Risks.jsx';
-import SideBar from '../components/SideBar.jsx';
-
 const NavBar = (props) => (
   <>
     {/* NavBar LEFT */}
