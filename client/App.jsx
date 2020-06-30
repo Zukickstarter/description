@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { GlobalStyle, css, NavBarButton } from './stylesFormat';
-import {Grid, Row, Col} from './stylesLayout';
+import {Grid, Row, Col, NavBarRow} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
 import Padbox from '@bedrock-layout/padbox';
 
@@ -55,7 +55,7 @@ class App extends React.Component {
             <NavBar />
             <Row>
               <Col size={1} collapse='laptop'>
-                <SideBar />
+                <SideBar as={NavBarRow}/>
               </Col>
               <Col size={4} as={Padbox}>
                 <Story story={data.story}/>
