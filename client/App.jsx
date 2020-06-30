@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { GlobalStyle, css, NavBarButton } from './stylesFormat';
-import {Grid, Row, Col, StickyRow} from './stylesLayout';
+import {Grid, Row, Col} from './stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
 import Padbox from '@bedrock-layout/padbox';
 

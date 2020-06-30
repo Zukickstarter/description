@@ -25,7 +25,7 @@ const generate100 = (() => {
       id: i,
       story: {
         textTop: faker.lorem.paragraphs(mLength).replace(/[\n\r]/g, '\n'),
-        imageMiddle: `http://www.fillmurray.com/${img1}/${img2}`,
+        imageMiddle: {url: `https://picsum.photos/id/${i}/${img1}/${img2}`, w: img1, h: img2},
         imageMiddleCaption: faker.lorem.sentence(),
         textBottom: faker.lorem.paragraphs(mLength).replace(/[\n\r]/g, '\n')
       },
