@@ -1,21 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledDesc, NavHeader } from '../stylesFormat';
-import {Stack} from 'every-layout';
-
-
+import { StyledDesc, SectionHeader, LinkText } from '../stylesFormat';
+import Stack from '@bedrock-layout/stack';
+import InlineCluster from '@bedrock-layout/inline-cluster';
 
 const Risks = ({risks}) => (
   <Stack>
     <StyledDesc>
-      <NavHeader id="risks">Risks and Challenges</NavHeader>
+      <SectionHeader id="risks">Risks and Challenges</SectionHeader>
       <div>{risks}</div>
       <br></br>
       <br></br>
-      <div>Learn about accountability on Kickstarter</div>
+      <LinkText >Learn about accountability on Kickstarter</LinkText>
       <br></br>
       <br></br>
-      <div>Questions about this project? Check out the FAQ</div>
+      <LinkText>Questions about this project? Check out the FAQ</LinkText>
     </StyledDesc>
   </Stack>
 );

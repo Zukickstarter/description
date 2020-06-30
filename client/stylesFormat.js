@@ -1,6 +1,6 @@
 import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
-// import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
 import MaisonNeueBookWoff from './assets/fonts/maisonNeueBook.woff';
+import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     src:
-      url(${MaisonNeueBookWoff}) format('woff');
+      url(${MaisonNeueBookWoff}) format('woff'),
+      url(${MaisonNeueBookWoffTwo}) format('woff2');
     }
 
   body {
@@ -34,7 +35,7 @@ export const Ul = styled.ul`
 list-style-type: none;
 `;
 
-export const NavButton = styled.button`
+export const SideBarButton = styled.p`
   display: block;
   cursor: pointer;
   font: inherit;
@@ -55,7 +56,7 @@ export const NavButton = styled.button`
   }
 `;
 
-export const HeaderButton = styled.button`
+export const NavBarButton = styled.button`
   display: block;
   cursor: pointer;
   font: inherit;
@@ -79,24 +80,37 @@ export const HeaderButton = styled.button`
   }
 `;
 
-
-export const ButtonWithBottom = styled(NavButton)`
+export const ButtonWithBottom = styled(SideBarButton)`
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
   border-bottom-color: rgb(220, 222, 221);
 `;
 
-export const NavHeader = styled.h3`
-  display: block;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 30px;
-  /* margin-block-start: 0px; */
-  margin-block-end: 30px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 30px;
+
+export const LinkText = styled(NavBarButton)`
+  color: ${props => props.black ? '#037362' : '#282828'};
+  /* color: #037362; */
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+
+  &:hover {
+    color: ${(props) => props.hoverPrimary ? '#282828' : '#037362'};
+  }
 `;
+
+
+// export const SideBar = styled.h3`
+//   display: block;
+//   font-size: 21px;
+//   font-weight: 400;
+//   line-height: 30px;
+//   /* margin-block-start: 0px; */
+//   margin-block-end: 30px;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   margin-bottom: 30px;
+// `;
 
 export const SectionHeader = styled.h1`
   color: #282828;
