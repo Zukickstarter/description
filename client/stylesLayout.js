@@ -14,10 +14,22 @@ export const Row = styled.div`
 
 export const NavBarRow = styled.div`
   display: flex;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   position: sticky;
   top: 0;
 `;
+
+// two props being passed here:
+// props.size adjusts column size
+// if props.collapse has a value that matches our defined media query size, our column will collapse
+export const Col = styled.div`
+  /* border: solid 1px green; */
+  flex: ${(props) => props.size};
+  ${(props) => props.collapse && media[props.collapse](`
+    display: none;
+  `)};
+`;
+
 
 // this xs function returns a media query passed with some styles based on the screen sizes we want to accommodate
 const media = {
@@ -48,13 +60,3 @@ const media = {
   `,
 };
 
-// two props being passed here:
-// props.size adjusts column size
-// if props.collapse has a value that matches our defined media query size, our column will collapse
-export const Col = styled.div`
-  /* border: solid 1px green; */
-  flex: ${(props) => props.size};
-  ${(props) => props.collapse && media[props.collapse](`
-    display: none;
-  `)};
-`;
