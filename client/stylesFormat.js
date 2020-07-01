@@ -4,19 +4,10 @@ import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`
-@font-face {
-    font-family: 'Maison Neue Book';
-    font-weight: normal;
-    font-style: normal;
-    src:
-      url(${MaisonNeueBookWoff}) format('woff'),
-      url(${MaisonNeueBookWoffTwo}) format('woff2');
-    }
-
   body {
     background: #fff;
     color: #282828;
-    font-family: "Maison Neue Book", "Webdings";
+    font-family: "Arial", "Webdings";
     font-size: 16px;
     /* line-height: 1rem; */
     /* margin-bottom: 3rem; */
@@ -26,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 export const StyledDesc = styled.div`
   background: #fff;
   color: #282828;
-  font-family: "Maison Neue Book", "Webdings";
+  font-family: "Arial", "Webdings";
   white-space: pre-wrap;
   margin-bottom: 60px;
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavBarButton } from '../stylesFormat';
-import {Grid, Row, Col, NavBarRow} from '../stylesLayout';
+import {Grid, Row, Col} from '../stylesLayout';
 import AppBoundary from '@bedrock-layout/appboundary';
 import Stack from '@bedrock-layout/stack';
 import Padbox from '@bedrock-layout/padbox';
@@ -12,7 +12,7 @@ const NavBar = (props) => (
   <>
     {/* NavBar LEFT */}
     <Padbox padding="sm" style={{ borderBottom: '1px solid #DCDEDD', borderTop: '1px solid #DCDEDD'}} >
-      <NavBarRow >
+      <Row >
         <Col size={5} align-items="center" >
           <InlineCluster gutter="lg" justify="start" align="center">
             {/* R E D */}
@@ -45,7 +45,7 @@ const NavBar = (props) => (
           </InlineCluster>
 
         </Col>
-      </NavBarRow>
+      </Row>
     </Padbox>
   </>
 );
