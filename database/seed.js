@@ -42,11 +42,12 @@ let data = generate100();
 // }
 
 const seedDb = () => {
-  // Desc.create(sampleDesc) // <- can't drop an empty db
-  Desc.collection.drop()
-    .then(() => Desc.create(data))
-    .then(() => console.log('database seeded!'))
-    .catch((err) => console.error('error seeding db: ' + err));
-};
+  Desc.create(data);
+/*    Desc.collection.drop()
+      .then(() => Desc.create(data))
+      .then(() => console.log('database seeded!'))
+      .catch((err) => console.error('error seeding db: ' + err));
+  });
+*/};
 
-seedDb();
+setTimeout(seedDb, 0);
