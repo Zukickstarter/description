@@ -1,6 +1,6 @@
 import styled, {createGlobalStyle, css, keyframes } from 'styled-components';
-import MaisonNeueBookWoff from './assets/fonts/maisonNeueBook.woff';
-import MaisonNeueBookWoffTwo from './assets/fonts/maisonNeueBook.woff2';
+import MaisonNeueBookWoff from '/Users/nick/Documents/GitHub/hrr46/FEC/description/public/maisonNeueBook.woff';
+import MaisonNeueBookWoffTwo from '/Users/nick/Documents/GitHub/hrr46/FEC/description/public/maisonNeueBook.woff2';
 // import MaisonNeueBookTtf from './assets/fonts/maisonNeueBook.ttf';
 
 export const GlobalStyle = createGlobalStyle`

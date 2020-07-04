@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`/api/description/${this.state.id}`)
+    axios.get(`http://localhost:3006/api/description/${this.state.id}`)
       .then(res => {
         this.setState({
           isLoaded: true,
@@ -60,9 +60,6 @@ class App extends React.Component {
               <Col size={4} as={Padbox}>
                 <Story story={data.story}/>
                 <Risks risks={data.risks}/>
-              </Col>
-              <Col size={2}>
-                <div></div>
               </Col>
             </Row>
           </Grid>
