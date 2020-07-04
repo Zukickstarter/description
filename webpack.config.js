@@ -1,12 +1,14 @@
 const path = require('path');
 
 module.exports = {
+  devtool: 'source-map',
   mode: 'production',
   entry: './client/index.js',
   watch: true,
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
+    publicPath: 'http://localhost:3006/'
   },
   module: {
     rules: [
