@@ -33,7 +33,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "every-layout": "^1.0.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "file-loader": "^6.0.0",
     "jest": "^26.1.0",
